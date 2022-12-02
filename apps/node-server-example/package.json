@@ -1,0 +1,16 @@
+{
+  "name": "server-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "bike src/index.ts dist/index.js --dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bike": "^1.0.9",
+    "fastify": "^4.10.2"
+  }
+}
