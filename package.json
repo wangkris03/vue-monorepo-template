@@ -9,6 +9,8 @@
     "lint": "eslint --cache --fix **/*.{tsx,ts}",
     "format": "prettier --cache --write --loglevel=warn \"**/*.{ts,tsx,md}\"",
     "check": "npm run format && git add . && npm run types && npm run lint && vitest run",
+    "build:vue": "pnpm -C apps/vue-example build",
+    "build:all": "pnpm -r --stream build",
     "prepare": "husky install"
   },
   "keywords": ["vue","monorepo","config"],

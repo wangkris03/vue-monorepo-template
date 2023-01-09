@@ -57,6 +57,17 @@ importers:
       bike: 1.0.9
       fastify: 4.10.2
 
+  apps/vue-doc:
+    specifiers:
+      '@algolia/client-search': ^4.14.3
+      vitepress: 1.0.0-alpha.35
+      vue: ^3.2.45
+    dependencies:
+      vue: 3.2.45
+    devDependencies:
+      '@algolia/client-search': 4.14.3
+      vitepress: 1.0.0-alpha.35_2r467mdhb7mblpaox4bg7fatdi
+
   apps/vue-example:
     specifiers:
       '@vitejs/plugin-vue': ^3.2.0
@@ -73,6 +84,117 @@ importers:
       vue-tsc: 1.0.10_typescript@4.9.3
 
 packages:
+
+  /@algolia/autocomplete-core/1.7.2:
+    resolution: {integrity: sha1-irvtiAgvYRmXU4dg3/y0OzOx/R0=}
+    dependencies:
+      '@algolia/autocomplete-shared': 1.7.2
+    dev: true
+
+  /@algolia/autocomplete-preset-algolia/1.7.2_dk4ct527ug5whbfokpeal2wzha:
+    resolution: {integrity: sha1-nNT2Sz1kOZZX7i3Ct+CpOeBxOiY=}
+    peerDependencies:
+      '@algolia/client-search': '>= 4.9.1 < 6'
+      algoliasearch: '>= 4.9.1 < 6'
+    dependencies:
+      '@algolia/autocomplete-shared': 1.7.2
+      '@algolia/client-search': 4.14.3
+      algoliasearch: 4.14.3
+    dev: true
+
+  /@algolia/autocomplete-shared/1.7.2:
+    resolution: {integrity: sha1-2qIygOeNO0KulWTRJHCuA021Gok=}
+    dev: true
+
+  /@algolia/cache-browser-local-storage/4.14.3:
+    resolution: {integrity: sha1-ueDaASsvEk94UTSk1GjuCEGyOZ0=}
+    dependencies:
+      '@algolia/cache-common': 4.14.3
+    dev: true
+
+  /@algolia/cache-common/4.14.3:
+    resolution: {integrity: sha1-p46fruPf7AGOq3sJlukY4GtHasc=}
+    dev: true
+
+  /@algolia/cache-in-memory/4.14.3:
+    resolution: {integrity: sha1-ls77lCrrgOUean4p8l9PfzQ5tzY=}
+    dependencies:
+      '@algolia/cache-common': 4.14.3
+    dev: true
+
+  /@algolia/client-account/4.14.3:
+    resolution: {integrity: sha1-bX0DKmXGADOc4GZQXHcBPZqeSWY=}
+    dependencies:
+      '@algolia/client-common': 4.14.3
+      '@algolia/client-search': 4.14.3
+      '@algolia/transporter': 4.14.3
+    dev: true
+
+  /@algolia/client-analytics/4.14.3:
+    resolution: {integrity: sha1-ykCdAKj/+Y/cwhXclnMQOZAAVdw=}
+    dependencies:
+      '@algolia/client-common': 4.14.3
+      '@algolia/client-search': 4.14.3
+      '@algolia/requester-common': 4.14.3
+      '@algolia/transporter': 4.14.3
+    dev: true
+
+  /@algolia/client-common/4.14.3:
+    resolution: {integrity: sha1-xE5IZSshIaINekDP1o0JXrtBkag=}
+    dependencies:
+      '@algolia/requester-common': 4.14.3
+      '@algolia/transporter': 4.14.3
+    dev: true
+
+  /@algolia/client-personalization/4.14.3:
+    resolution: {integrity: sha1-j3EyUDWqKl+n0dVnV1I1zx1sZU8=}
+    dependencies:
+      '@algolia/client-common': 4.14.3
+      '@algolia/requester-common': 4.14.3
+      '@algolia/transporter': 4.14.3
+    dev: true
+
+  /@algolia/client-search/4.14.3:
+    resolution: {integrity: sha1-zx53VJ9cPnNAj/5kQe3phf3mnaA=}
+    dependencies:
+      '@algolia/client-common': 4.14.3
+      '@algolia/requester-common': 4.14.3
+      '@algolia/transporter': 4.14.3
+    dev: true
+
+  /@algolia/logger-common/4.14.3:
+    resolution: {integrity: sha1-h9RyXn9W6lo5tgV3G3FJ//YgMqc=}
+    dev: true
+
+  /@algolia/logger-console/4.14.3:
+    resolution: {integrity: sha1-Hxn48KXvEfAdH5VFKQ62qJtx+4o=}
+    dependencies:
+      '@algolia/logger-common': 4.14.3
+    dev: true
+
+  /@algolia/requester-browser-xhr/4.14.3:
+    resolution: {integrity: sha1-vPVcuiD1j9m8le5VeTtSGfPOiIg=}
+    dependencies:
+      '@algolia/requester-common': 4.14.3
+    dev: true
+
+  /@algolia/requester-common/4.14.3:
+    resolution: {integrity: sha1-LQL74Br7euVlGujf5i1sCJ8QNxQ=}
+    dev: true
+
+  /@algolia/requester-node-http/4.14.3:
+    resolution: {integrity: sha1-cjieHC5dlkcCRR5142ju/oWgnY8=}
+    dependencies:
+      '@algolia/requester-common': 4.14.3
+    dev: true
+
+  /@algolia/transporter/4.14.3:
+    resolution: {integrity: sha1-VZMDa9nPKt/Qd/3D6B0uYRhmCno=}
+    dependencies:
+      '@algolia/cache-common': 4.14.3
+      '@algolia/logger-common': 4.14.3
+      '@algolia/requester-common': 4.14.3
+    dev: true
 
   /@ampproject/remapping/2.2.0:
     resolution: {integrity: sha1-VsEzgkeA3jF0rtWraDTzAmeQFU0=}
@@ -254,11 +376,11 @@ packages:
     dev: true
 
   /@babel/helper-string-parser/7.19.4:
-    resolution: {integrity: sha1-ONOstlS0cBqbd/sGFalvd1w6nmM=}
+    resolution: {integrity: sha1-ONOstlS0cBqbd/sGFalvd1w6nmM=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@babel/helper-string-parser/-/helper-string-parser-7.19.4.tgz}
     engines: {node: '>=6.9.0'}
 
   /@babel/helper-validator-identifier/7.19.1:
-    resolution: {integrity: sha1-fuqDTPMpAf/cGn7lVeL5wn4knKI=}
+    resolution: {integrity: sha1-fuqDTPMpAf/cGn7lVeL5wn4knKI=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@babel/helper-validator-identifier/-/helper-validator-identifier-7.19.1.tgz}
     engines: {node: '>=6.9.0'}
 
   /@babel/helper-validator-option/7.18.6:
@@ -287,7 +409,7 @@ packages:
     dev: true
 
   /@babel/parser/7.20.5:
-    resolution: {integrity: sha1-fzxzNf5BdmXZKfNK5dzq5MBAFeg=}
+    resolution: {integrity: sha1-fzxzNf5BdmXZKfNK5dzq5MBAFeg=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@babel/parser/-/parser-7.20.5.tgz}
     engines: {node: '>=6.0.0'}
     hasBin: true
     dependencies:
@@ -367,12 +489,50 @@ packages:
     dev: true
 
   /@babel/types/7.20.5:
-    resolution: {integrity: sha1-4gauNwtTk9lN/R0EzWh8rOU++oQ=}
+    resolution: {integrity: sha1-4gauNwtTk9lN/R0EzWh8rOU++oQ=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@babel/types/-/types-7.20.5.tgz}
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/helper-string-parser': 7.19.4
       '@babel/helper-validator-identifier': 7.19.1
       to-fast-properties: 2.0.0
+
+  /@docsearch/css/3.3.1:
+    resolution: {integrity: sha1-MgQVgb/7GoNAcv0hymbR3Z8BYJg=}
+    dev: true
+
+  /@docsearch/js/3.3.1_2r467mdhb7mblpaox4bg7fatdi:
+    resolution: {integrity: sha1-YSVr+wyxeEDmJZuchvQJqpjwJDg=}
+    dependencies:
+      '@docsearch/react': 3.3.1_2r467mdhb7mblpaox4bg7fatdi
+      preact: 10.11.3
+    transitivePeerDependencies:
+      - '@algolia/client-search'
+      - '@types/react'
+      - react
+      - react-dom
+    dev: true
+
+  /@docsearch/react/3.3.1_2r467mdhb7mblpaox4bg7fatdi:
+    resolution: {integrity: sha1-R85KJnqdrxtdkTuXkoS09iQIgAM=}
+    peerDependencies:
+      '@types/react': '>= 16.8.0 < 19.0.0'
+      react: '>= 16.8.0 < 19.0.0'
+      react-dom: '>= 16.8.0 < 19.0.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
+    dependencies:
+      '@algolia/autocomplete-core': 1.7.2
+      '@algolia/autocomplete-preset-algolia': 1.7.2_dk4ct527ug5whbfokpeal2wzha
+      '@docsearch/css': 3.3.1
+      algoliasearch: 4.14.3
+    transitivePeerDependencies:
+      - '@algolia/client-search'
+    dev: true
 
   /@esbuild/android-arm/0.15.16:
     resolution: {integrity: sha1-BkKSYXixXj0VRe+ubu4FxPNFHRU=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@esbuild/android-arm/-/android-arm-0.15.16.tgz}
@@ -383,11 +543,209 @@ packages:
     dev: true
     optional: true
 
+  /@esbuild/android-arm/0.16.16:
+    resolution: {integrity: sha1-I3YbL9HfpIBhYdv8nggk8EBhy5U=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@esbuild/android-arm/-/android-arm-0.16.16.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/android-arm64/0.16.16:
+    resolution: {integrity: sha1-gzGEuKCpb5yFEFxT0KZ+bTxcPwc=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@esbuild/android-arm64/-/android-arm64-0.16.16.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/android-x64/0.16.16:
+    resolution: {integrity: sha1-/6CfBMD/6ltZSrdlX8nKEiA2Xps=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@esbuild/android-x64/-/android-x64-0.16.16.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/darwin-arm64/0.16.16:
+    resolution: {integrity: sha1-Yu0rS/q1lLnl5whYA2Hx0Fm1OyY=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@esbuild/darwin-arm64/-/darwin-arm64-0.16.16.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/darwin-x64/0.16.16:
+    resolution: {integrity: sha1-6XVtNM2bNzelNU6Jyg/coy2N9kw=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@esbuild/darwin-x64/-/darwin-x64-0.16.16.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/freebsd-arm64/0.16.16:
+    resolution: {integrity: sha1-23vORE03LlohOj81nEKu46zA3UU=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@esbuild/freebsd-arm64/-/freebsd-arm64-0.16.16.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/freebsd-x64/0.16.16:
+    resolution: {integrity: sha1-AuioG35WBAteuIOJbeRFps01AfA=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@esbuild/freebsd-x64/-/freebsd-x64-0.16.16.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/linux-arm/0.16.16:
+    resolution: {integrity: sha1-wcLpfme7ckfm9g4mRN4Fe/7bjLs=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@esbuild/linux-arm/-/linux-arm-0.16.16.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/linux-arm64/0.16.16:
+    resolution: {integrity: sha1-6ow98XJkT6ZDfwCDwqOLUPieW5g=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@esbuild/linux-arm64/-/linux-arm64-0.16.16.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/linux-ia32/0.16.16:
+    resolution: {integrity: sha1-mgsOkmkm+JGj5/fFC7OOPbScLJo=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@esbuild/linux-ia32/-/linux-ia32-0.16.16.tgz}
+    engines: {node: '>=12'}
+    cpu: [ia32]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /@esbuild/linux-loong64/0.15.16:
     resolution: {integrity: sha1-KEUi3nar6VHk7SvSSkZ+jUnGeTM=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@esbuild/linux-loong64/-/linux-loong64-0.15.16.tgz}
     engines: {node: '>=12'}
     cpu: [loong64]
     os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/linux-loong64/0.16.16:
+    resolution: {integrity: sha1-xaUP9ZgdRX7UX0LD8GpgCGdZx5s=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@esbuild/linux-loong64/-/linux-loong64-0.16.16.tgz}
+    engines: {node: '>=12'}
+    cpu: [loong64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/linux-mips64el/0.16.16:
+    resolution: {integrity: sha1-6Ft+PCUAC+KuNz5SCOVeKCqXY+A=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@esbuild/linux-mips64el/-/linux-mips64el-0.16.16.tgz}
+    engines: {node: '>=12'}
+    cpu: [mips64el]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/linux-ppc64/0.16.16:
+    resolution: {integrity: sha1-JKABO/cngw30T+zlcRcuvjG1xeY=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@esbuild/linux-ppc64/-/linux-ppc64-0.16.16.tgz}
+    engines: {node: '>=12'}
+    cpu: [ppc64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/linux-riscv64/0.16.16:
+    resolution: {integrity: sha1-sICZjY0EgOgjXxOExYWuUF6YoZ0=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@esbuild/linux-riscv64/-/linux-riscv64-0.16.16.tgz}
+    engines: {node: '>=12'}
+    cpu: [riscv64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/linux-s390x/0.16.16:
+    resolution: {integrity: sha1-UELeBbm2U9/RNPBeGze2FwTBTEI=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@esbuild/linux-s390x/-/linux-s390x-0.16.16.tgz}
+    engines: {node: '>=12'}
+    cpu: [s390x]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/linux-x64/0.16.16:
+    resolution: {integrity: sha1-t8B1DyJ2ydz0Hw8iKa3KRu8i9pg=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@esbuild/linux-x64/-/linux-x64-0.16.16.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/netbsd-x64/0.16.16:
+    resolution: {integrity: sha1-4qDuGB+76DQXTSbiTOGyWCMrs+s=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@esbuild/netbsd-x64/-/netbsd-x64-0.16.16.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [netbsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/openbsd-x64/0.16.16:
+    resolution: {integrity: sha1-h6hMGTLgD1KrM4DDH6zw5ICG/7k=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@esbuild/openbsd-x64/-/openbsd-x64-0.16.16.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [openbsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/sunos-x64/0.16.16:
+    resolution: {integrity: sha1-mWvNJgPNNFczw6pfUr/VuPp9HTY=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@esbuild/sunos-x64/-/sunos-x64-0.16.16.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [sunos]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/win32-arm64/0.16.16:
+    resolution: {integrity: sha1-QEqUEdElM9DyzgqF323bMuhR7wQ=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@esbuild/win32-arm64/-/win32-arm64-0.16.16.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/win32-ia32/0.16.16:
+    resolution: {integrity: sha1-u1ZVpI9fh/7ocAYYg0EfUUm8XkQ=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@esbuild/win32-ia32/-/win32-ia32-0.16.16.tgz}
+    engines: {node: '>=12'}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/win32-x64/0.16.16:
+    resolution: {integrity: sha1-7iL+0LLgwAzolc366dMu8GmhLgQ=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@esbuild/win32-x64/-/win32-x64-0.16.16.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [win32]
     requiresBuild: true
     dev: true
     optional: true
@@ -606,6 +964,10 @@ packages:
     resolution: {integrity: sha1-2kv9c/Sb1UHSiSCrDivw7oD3HJE=}
     dev: true
 
+  /@types/web-bluetooth/0.0.16:
+    resolution: {integrity: sha1-HRKHOo5JVnNx8qdf4+f37cpmYtg=}
+    dev: true
+
   /@typescript-eslint/eslint-plugin/5.45.0_czs5uoqkd3podpy6vgtsxfc7au:
     resolution: {integrity: sha1-/6UFz5YdSETTjPoZ3OxJc6YDnkE=}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -783,6 +1145,17 @@ packages:
       vue: 3.2.45
     dev: true
 
+  /@vitejs/plugin-vue/4.0.0_vite@4.0.4+vue@3.2.45:
+    resolution: {integrity: sha1-k4Fb7/0j20YojHhzUqjqMaDAPl4=}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    peerDependencies:
+      vite: ^4.0.0
+      vue: ^3.2.25
+    dependencies:
+      vite: 4.0.4
+      vue: 3.2.45
+    dev: true
+
   /@volar/language-core/1.0.10:
     resolution: {integrity: sha1-/0G9PRLn3bDpVMVj2Bj8Y8R71Kw=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@volar/language-core/-/language-core-1.0.10.tgz}
     dependencies:
@@ -845,7 +1218,7 @@ packages:
     dev: true
 
   /@vue/compiler-core/3.2.45:
-    resolution: {integrity: sha1-2TESB9lvbr1fRmC+Ep+5nwHdtBs=}
+    resolution: {integrity: sha1-2TESB9lvbr1fRmC+Ep+5nwHdtBs=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@vue/compiler-core/-/compiler-core-3.2.45.tgz}
     dependencies:
       '@babel/parser': 7.20.5
       '@vue/shared': 3.2.45
@@ -853,13 +1226,13 @@ packages:
       source-map: 0.6.1
 
   /@vue/compiler-dom/3.2.45:
-    resolution: {integrity: sha1-xDzBXlDaYuzBakLyYi0l3F/Zfc4=}
+    resolution: {integrity: sha1-xDzBXlDaYuzBakLyYi0l3F/Zfc4=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@vue/compiler-dom/-/compiler-dom-3.2.45.tgz}
     dependencies:
       '@vue/compiler-core': 3.2.45
       '@vue/shared': 3.2.45
 
   /@vue/compiler-sfc/3.2.45:
-    resolution: {integrity: sha1-f3mJzATsnnxVrNQGgnosTpaHLHA=}
+    resolution: {integrity: sha1-f3mJzATsnnxVrNQGgnosTpaHLHA=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@vue/compiler-sfc/-/compiler-sfc-3.2.45.tgz}
     dependencies:
       '@babel/parser': 7.20.5
       '@vue/compiler-core': 3.2.45
@@ -869,14 +1242,18 @@ packages:
       '@vue/shared': 3.2.45
       estree-walker: 2.0.2
       magic-string: 0.25.9
-      postcss: 8.4.19
+      postcss: 8.4.21
       source-map: 0.6.1
 
   /@vue/compiler-ssr/3.2.45:
-    resolution: {integrity: sha1-vSBgS25k6hU0TVtieMQUEZHJg7I=}
+    resolution: {integrity: sha1-vSBgS25k6hU0TVtieMQUEZHJg7I=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@vue/compiler-ssr/-/compiler-ssr-3.2.45.tgz}
     dependencies:
       '@vue/compiler-dom': 3.2.45
       '@vue/shared': 3.2.45
+
+  /@vue/devtools-api/6.4.5:
+    resolution: {integrity: sha1-1U6ETBrbseZ3yBxmXs7xorS7g4A=}
+    dev: true
 
   /@vue/eslint-config-prettier/7.0.0_5qrnzwqb344w6up62gv3safeoi:
     resolution: {integrity: sha1-RKtVyiJAEQK1d5XFlCjp2t5yvjQ=}
@@ -912,7 +1289,7 @@ packages:
     dev: true
 
   /@vue/reactivity-transform/3.2.45:
-    resolution: {integrity: sha1-B6yDuBOFUMg9+1DbQ83h4OXoEk0=}
+    resolution: {integrity: sha1-B6yDuBOFUMg9+1DbQ83h4OXoEk0=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@vue/reactivity-transform/-/reactivity-transform-3.2.45.tgz}
     dependencies:
       '@babel/parser': 7.20.5
       '@vue/compiler-core': 3.2.45
@@ -921,25 +1298,25 @@ packages:
       magic-string: 0.25.9
 
   /@vue/reactivity/3.2.45:
-    resolution: {integrity: sha1-QSpFtXTeYBvlpKXZqMvU3uRmL/A=}
+    resolution: {integrity: sha1-QSpFtXTeYBvlpKXZqMvU3uRmL/A=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@vue/reactivity/-/reactivity-3.2.45.tgz}
     dependencies:
       '@vue/shared': 3.2.45
 
   /@vue/runtime-core/3.2.45:
-    resolution: {integrity: sha1-etfvmyUZ1BBiowxvoAHsQ6xUnH8=}
+    resolution: {integrity: sha1-etfvmyUZ1BBiowxvoAHsQ6xUnH8=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@vue/runtime-core/-/runtime-core-3.2.45.tgz}
     dependencies:
       '@vue/reactivity': 3.2.45
       '@vue/shared': 3.2.45
 
   /@vue/runtime-dom/3.2.45:
-    resolution: {integrity: sha1-Gi727irYdiBvu+KohFVLui0Pr1k=}
+    resolution: {integrity: sha1-Gi727irYdiBvu+KohFVLui0Pr1k=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@vue/runtime-dom/-/runtime-dom-3.2.45.tgz}
     dependencies:
       '@vue/runtime-core': 3.2.45
       '@vue/shared': 3.2.45
       csstype: 2.6.21
 
   /@vue/server-renderer/3.2.45_vue@3.2.45:
-    resolution: {integrity: sha1-ypMGoMErBTCholDkT0oKusa4Hz8=}
+    resolution: {integrity: sha1-ypMGoMErBTCholDkT0oKusa4Hz8=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@vue/server-renderer/-/server-renderer-3.2.45.tgz}
     peerDependencies:
       vue: 3.2.45
     dependencies:
@@ -948,7 +1325,7 @@ packages:
       vue: 3.2.45
 
   /@vue/shared/3.2.45:
-    resolution: {integrity: sha1-o//6dInq//ONmE4j0CNuIwyBi8I=}
+    resolution: {integrity: sha1-o//6dInq//ONmE4j0CNuIwyBi8I=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/@vue/shared/-/shared-3.2.45.tgz}
 
   /@vue/test-utils/2.2.4_vue@3.2.45:
     resolution: {integrity: sha1-KqgVnMH1Xl4U2cFkKBjijW+dY2s=}
@@ -956,6 +1333,31 @@ packages:
       vue: ^3.0.1
     dependencies:
       vue: 3.2.45
+    dev: true
+
+  /@vueuse/core/9.10.0_vue@3.2.45:
+    resolution: {integrity: sha1-LvblXKdzxbLbHj8TuCkq+W3TIhQ=}
+    dependencies:
+      '@types/web-bluetooth': 0.0.16
+      '@vueuse/metadata': 9.10.0
+      '@vueuse/shared': 9.10.0_vue@3.2.45
+      vue-demi: 0.13.11_vue@3.2.45
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: true
+
+  /@vueuse/metadata/9.10.0:
+    resolution: {integrity: sha1-Gl65TKdVvY5mZQX0fafYiWnP/cc=}
+    dev: true
+
+  /@vueuse/shared/9.10.0_vue@3.2.45:
+    resolution: {integrity: sha1-SYdKD5lV0oaJsxM95mA2fGPbwDA=}
+    dependencies:
+      vue-demi: 0.13.11_vue@3.2.45
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
     dev: true
 
   /abort-controller/3.0.0:
@@ -1022,6 +1424,25 @@ packages:
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
       uri-js: 4.4.1
+    dev: true
+
+  /algoliasearch/4.14.3:
+    resolution: {integrity: sha1-8Cp3pNsX3i9nYBiTiEdJS2kgNec=}
+    dependencies:
+      '@algolia/cache-browser-local-storage': 4.14.3
+      '@algolia/cache-common': 4.14.3
+      '@algolia/cache-in-memory': 4.14.3
+      '@algolia/client-account': 4.14.3
+      '@algolia/client-analytics': 4.14.3
+      '@algolia/client-common': 4.14.3
+      '@algolia/client-personalization': 4.14.3
+      '@algolia/client-search': 4.14.3
+      '@algolia/logger-common': 4.14.3
+      '@algolia/logger-console': 4.14.3
+      '@algolia/requester-browser-xhr': 4.14.3
+      '@algolia/requester-common': 4.14.3
+      '@algolia/requester-node-http': 4.14.3
+      '@algolia/transporter': 4.14.3
     dev: true
 
   /ansi-escapes/4.3.2:
@@ -1171,6 +1592,10 @@ packages:
     transitivePeerDependencies:
       - debug
       - supports-color
+    dev: true
+
+  /body-scroll-lock/4.0.0-beta.0:
+    resolution: {integrity: sha1-T3h4nRDmOIEVwEYM1tfU3Su8T34=}
     dev: true
 
   /boolbase/1.0.0:
@@ -1431,7 +1856,7 @@ packages:
     dev: true
 
   /csstype/2.6.21:
-    resolution: {integrity: sha1-LvuFt8xVyAAXxmpa18vZMf2jqQ4=}
+    resolution: {integrity: sha1-LvuFt8xVyAAXxmpa18vZMf2jqQ4=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/csstype/-/csstype-2.6.21.tgz}
 
   /de-indent/1.0.2:
     resolution: {integrity: sha1-sgOOhG3DO6pXlhKNCAS0VbjB4h0=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/de-indent/-/de-indent-1.0.2.tgz}
@@ -1758,6 +2183,36 @@ packages:
       esbuild-windows-arm64: 0.15.16
     dev: true
 
+  /esbuild/0.16.16:
+    resolution: {integrity: sha1-6KJ4IKMMwUSQZvm76JFrFF28kEY=}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    optionalDependencies:
+      '@esbuild/android-arm': 0.16.16
+      '@esbuild/android-arm64': 0.16.16
+      '@esbuild/android-x64': 0.16.16
+      '@esbuild/darwin-arm64': 0.16.16
+      '@esbuild/darwin-x64': 0.16.16
+      '@esbuild/freebsd-arm64': 0.16.16
+      '@esbuild/freebsd-x64': 0.16.16
+      '@esbuild/linux-arm': 0.16.16
+      '@esbuild/linux-arm64': 0.16.16
+      '@esbuild/linux-ia32': 0.16.16
+      '@esbuild/linux-loong64': 0.16.16
+      '@esbuild/linux-mips64el': 0.16.16
+      '@esbuild/linux-ppc64': 0.16.16
+      '@esbuild/linux-riscv64': 0.16.16
+      '@esbuild/linux-s390x': 0.16.16
+      '@esbuild/linux-x64': 0.16.16
+      '@esbuild/netbsd-x64': 0.16.16
+      '@esbuild/openbsd-x64': 0.16.16
+      '@esbuild/sunos-x64': 0.16.16
+      '@esbuild/win32-arm64': 0.16.16
+      '@esbuild/win32-ia32': 0.16.16
+      '@esbuild/win32-x64': 0.16.16
+    dev: true
+
   /escalade/3.1.1:
     resolution: {integrity: sha1-2M/ccACWXFoBdLSoLqpcBVJ0LkA=}
     engines: {node: '>=6'}
@@ -1970,7 +2425,7 @@ packages:
     dev: true
 
   /estree-walker/2.0.2:
-    resolution: {integrity: sha1-UvAQF4wqTBF6d1fP6UKtt9LaTKw=}
+    resolution: {integrity: sha1-UvAQF4wqTBF6d1fP6UKtt9LaTKw=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/estree-walker/-/estree-walker-2.0.2.tgz}
 
   /esutils/2.0.3:
     resolution: {integrity: sha1-dNLrTeC42hKTcRkQ1Qd1ubcQ72Q=}
@@ -2693,6 +3148,10 @@ packages:
     hasBin: true
     dev: true
 
+  /jsonc-parser/3.2.0:
+    resolution: {integrity: sha1-Mf8/TCuXk/icZyEmJ8UcY5T4jnY=}
+    dev: true
+
   /levn/0.3.0:
     resolution: {integrity: sha1-OwmSTt+fCDwEkP3UwLxEIeBHZO4=}
     engines: {node: '>= 0.8.0'}
@@ -2806,7 +3265,7 @@ packages:
     dev: true
 
   /magic-string/0.25.9:
-    resolution: {integrity: sha1-3n+fr5HvihyR0CwuUxTIJ3283Rw=}
+    resolution: {integrity: sha1-3n+fr5HvihyR0CwuUxTIJ3283Rw=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/magic-string/-/magic-string-0.25.9.tgz}
     dependencies:
       sourcemap-codec: 1.4.8
 
@@ -3180,6 +3639,19 @@ packages:
       nanoid: 3.3.4
       picocolors: 1.0.0
       source-map-js: 1.0.2
+    dev: true
+
+  /postcss/8.4.21:
+    resolution: {integrity: sha1-xjm3GaV+/DGHsToddlZ1SF9BNPQ=}
+    engines: {node: ^10 || ^12 || >=14}
+    dependencies:
+      nanoid: 3.3.4
+      picocolors: 1.0.0
+      source-map-js: 1.0.2
+
+  /preact/10.11.3:
+    resolution: {integrity: sha1-in5LoZ05ksSIsHha/MD4qhPHjRk=}
+    dev: true
 
   /prelude-ls/1.1.2:
     resolution: {integrity: sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=}
@@ -3373,6 +3845,14 @@ packages:
       fsevents: 2.3.2
     dev: true
 
+  /rollup/3.9.1:
+    resolution: {integrity: sha1-J1AdPQJkGHZf43nVYg0llU/yoBE=}
+    engines: {node: '>=14.18.0', npm: '>=8.0.0'}
+    hasBin: true
+    optionalDependencies:
+      fsevents: 2.3.2
+    dev: true
+
   /run-parallel/1.2.0:
     resolution: {integrity: sha1-ZtE2jae9+SHrnZW9GpIp5/IaQ+4=}
     dependencies:
@@ -3441,6 +3921,14 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /shiki/0.12.1:
+    resolution: {integrity: sha1-JvzlHaEtBV9HmgkaUwdHB4bzAM0=}
+    dependencies:
+      jsonc-parser: 3.2.0
+      vscode-oniguruma: 1.7.0
+      vscode-textmate: 8.0.0
+    dev: true
+
   /side-channel/1.0.4:
     resolution: {integrity: sha1-785cj9wQTudRslxY1CkAEfpeos8=}
     dependencies:
@@ -3502,11 +3990,12 @@ packages:
     dev: true
 
   /source-map/0.6.1:
-    resolution: {integrity: sha1-dHIq8y6WFOnCh6jQu95IteLxomM=}
+    resolution: {integrity: sha1-dHIq8y6WFOnCh6jQu95IteLxomM=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/source-map/-/source-map-0.6.1.tgz}
     engines: {node: '>=0.10.0'}
 
   /sourcemap-codec/1.4.8:
-    resolution: {integrity: sha1-6oBL2UhXQC5pktBaOO8a41qatMQ=}
+    resolution: {integrity: sha1-6oBL2UhXQC5pktBaOO8a41qatMQ=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/sourcemap-codec/-/sourcemap-codec-1.4.8.tgz}
+    deprecated: Please use @jridgewell/sourcemap-codec instead
 
   /split2/4.1.0:
     resolution: {integrity: sha1-EBkHokNw+Fu3gvCK2qvk4oHs+Ak=}
@@ -3666,7 +4155,7 @@ packages:
     dev: true
 
   /to-fast-properties/2.0.0:
-    resolution: {integrity: sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=}
+    resolution: {integrity: sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/to-fast-properties/-/to-fast-properties-2.0.0.tgz}
     engines: {node: '>=4'}
 
   /to-regex-range/5.0.1:
@@ -3851,6 +4340,89 @@ packages:
       fsevents: 2.3.2
     dev: true
 
+  /vite/4.0.4:
+    resolution: {integrity: sha1-RhLOC0e7sjOoh6VKSuDG4kCg2jE=}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    hasBin: true
+    peerDependencies:
+      '@types/node': '>= 14'
+      less: '*'
+      sass: '*'
+      stylus: '*'
+      sugarss: '*'
+      terser: ^5.4.0
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      less:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+    dependencies:
+      esbuild: 0.16.16
+      postcss: 8.4.21
+      resolve: 1.22.1
+      rollup: 3.9.1
+    optionalDependencies:
+      fsevents: 2.3.2
+    dev: true
+
+  /vitepress/1.0.0-alpha.35_2r467mdhb7mblpaox4bg7fatdi:
+    resolution: {integrity: sha1-WpLw2l5ottongLQ1DiFvmwBwu1k=}
+    hasBin: true
+    dependencies:
+      '@docsearch/css': 3.3.1
+      '@docsearch/js': 3.3.1_2r467mdhb7mblpaox4bg7fatdi
+      '@vitejs/plugin-vue': 4.0.0_vite@4.0.4+vue@3.2.45
+      '@vue/devtools-api': 6.4.5
+      '@vueuse/core': 9.10.0_vue@3.2.45
+      body-scroll-lock: 4.0.0-beta.0
+      shiki: 0.12.1
+      vite: 4.0.4
+      vue: 3.2.45
+    transitivePeerDependencies:
+      - '@algolia/client-search'
+      - '@types/node'
+      - '@types/react'
+      - '@vue/composition-api'
+      - less
+      - react
+      - react-dom
+      - sass
+      - stylus
+      - sugarss
+      - terser
+    dev: true
+
+  /vscode-oniguruma/1.7.0:
+    resolution: {integrity: sha1-Q5v62P5xq9d5gzjRzT3FOovuqUs=}
+    dev: true
+
+  /vscode-textmate/8.0.0:
+    resolution: {integrity: sha1-LHo7EWPvBEEJfgtdY4nNVQS1nl0=}
+    dev: true
+
+  /vue-demi/0.13.11_vue@3.2.45:
+    resolution: {integrity: sha1-fZA2m9rol02HsZc1ZK05AYJBDZk=}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: 3.2.45
+    dev: true
+
   /vue-eslint-parser/9.1.0_eslint@8.28.0:
     resolution: {integrity: sha1-DhIdG7Kb0QdjyD48xYPuA0NKndU=}
     engines: {node: ^14.17.0 || >=16.0.0}
@@ -3888,7 +4460,7 @@ packages:
     dev: true
 
   /vue/3.2.45:
-    resolution: {integrity: sha1-lKEWeERH6329iSFneEYZ/vN5s8g=}
+    resolution: {integrity: sha1-lKEWeERH6329iSFneEYZ/vN5s8g=, tarball: https://artifactory.sf-express.com:443/artifactory/api/npm/npm/vue/-/vue-3.2.45.tgz}
     dependencies:
       '@vue/compiler-dom': 3.2.45
       '@vue/compiler-sfc': 3.2.45
